@@ -1,0 +1,30 @@
+
+	
+
+.divider-vertical {
+    height: 25;
+    margin:25 9px;
+    border-right: 1px solid Black;
+    border-left: 1px solid Black;
+}
+.divider-right {
+    height: 25;
+    margin: 25 9px;
+    border-right:1px solid black;
+}
+.FantasyFont{
+font-family: Papyrus, fantasy;
+color: black;
+font-weight:bold;
+}
+
+.navbar-inner {
+    min-height: 0px;
+}
+
+.navbar-brand,
+.navbar-nav li a {
+    line-height: 75px;
+    height: 75px;
+    padding-top: 0;
+}
