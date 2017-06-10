@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http'
+import 'rxjs/add/operator/map'
 
 @Injectable()
 export class TLImageGetService {
@@ -17,11 +18,9 @@ export class TLImageGetService {
   }
 
   getAllImageTypes() {
-    this.http.get(this.domain + "GetAllImageTypes").subscribe(res => {
-      const data = res.json();
-      console.log(data);
-      return data;
-    })
+    return this.http.get(this.domain + "GetAllImageTypes").map(res => res.json());
+
+    
   }
 
   getAllImageTags() {

@@ -6,17 +6,23 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
+import { TLImageGetService } from 'app/tlimage-get/tlimage-get.service';
+import { DrawingsComponent } from './drawings/drawings.component';
+import { ImageComponent } from './image/image.component'
+
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    DrawingsComponent,
+    ImageComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [TLImageGetService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

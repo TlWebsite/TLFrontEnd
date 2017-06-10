@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TLImageGetService } from 'app/tlimage-get/tlimage-get.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
-  constructor() { }
+ imagetypes
+ hardcodedtypes
+  constructor(private imageService: TLImageGetService) { 
+      imageService.getAllImageTypes().subscribe(res=>{this.imagetypes = res; console.log(res)});
+     this.hardcodedtypes = ['test','test2'];
+  }
 
   ngOnInit() {
+    
   }
 
 }
